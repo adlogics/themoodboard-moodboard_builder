@@ -112,3 +112,64 @@ html,body{
     outline: 0;
     border: 1px solid #403F44;
 }
+
+/* #main-body (workspace) starts here------------------------------------------------------- */
+
+#main-body{
+    flex-grow: 1;
+    background-color: #1B1A1F;
+    display: flex;
+    flex-wrap: wrap;
+    /* align-items: flex-start; */
+    /* justify-content: space-between;   */
+    position: relative;
+    padding: 56px 76px;
+    overflow: auto;
+    height: calc(100vh - 44px);
+    /* border: 1px solid #ddd; */
+}
+
+
+.note {
+    cursor: pointer;
+    min-width: 150px;
+    min-height: 50px;
+    padding: 16px;
+    color: #1B1A1F;
+    background-color: #403F44;
+    color: #EDEDED;
+    font-size: 12px;
+    /* border-radius: 1px; */
+    outline: none;
+    border: none;
+}
+.text {
+    min-width: 150px;
+    min-height: 100px;
+    background-color: transparent;
+    /* background-color: #EDEDED; */
+    color: #EDEDED;
+    border: none;
+    outline: none;
+}
+
+.image {
+    width: 150px;
+    height: 150px;
+    background-color: #EDEDED;
+}
+
+.upload {
+    min-width: 150px;
+    min-height: 50px;
+    background-color: #EDEDED;
+}
+#dustbin{
+    position: fixed;
+    bottom: 64px;
+    right: 64px;
+}
+#dustbin .dustbinn{
+    color: #403F44;
+    font-size: 48px;
+}
