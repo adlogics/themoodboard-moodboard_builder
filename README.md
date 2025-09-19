@@ -6,7 +6,7 @@ This is a frontend-only moodboard app built with HTML, CSS, and JavaScript, allo
 <br>
 WHAT IS A MOODBOARD?<br>
 💡 A moodboard is a visual space to collect and organize ideas using images, text, and notes.
-It's used by designers and creatives to plan styles, concepts, or inspiration.
+It's used by designers and creatives to plan styles, concepts, or inspiration.<br>
 
 <br>
 FUNCTIONALITIES OF MY WEB APP: <br>
@@ -17,12 +17,12 @@ Users can add notes, images, text blocks to the main workspace by clicking butto
 All elements (notes, images, text etc.) can be dragged and moved anywhere on the board. This gives users full control over how they organize their ideas visually.<br>
 
 ✅ 3. Paste Images from Clipboard
-Users can copy and paste images (or image URLs) directly into the workspace. The pasted image appears on the board and can also be moved around like any other item.
+Users can copy and paste images (or image URLs) directly into the workspace. The pasted image appears on the board and can also be moved around like any other item.<br>
 
 <br>
 FUTURE VERSIONS:<br>
 Gonna add upload functionality in future version.<br>
-Gonna add storage or database support in future version.
+Gonna add storage or database support in future version.<br>
 
 <br>
 HOW IT LOOKS?<br>
