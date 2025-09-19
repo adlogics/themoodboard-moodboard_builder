@@ -154,16 +154,16 @@ html,body{
 }
 
 .image {
-    width: 150px;
-    height: 150px;
-    background-color: #EDEDED;
+    width: auto;
+    height: auto;
+    /* background-color: #EDEDED; */
 }
 
-.upload {
+/* .upload {
     min-width: 150px;
     min-height: 50px;
     background-color: #EDEDED;
-}
+} */
 #dustbin{
     position: fixed;
     bottom: 64px;
@@ -172,4 +172,7 @@ html,body{
 #dustbin .dustbinn{
     color: #403F44;
     font-size: 48px;
+}
+.image img {
+  pointer-events: none;
 }

@@ -21,7 +21,6 @@ const pName = ()=>{
 document.getElementById('note-btn').addEventListener('click', () => addElement('note'));
 document.getElementById('img-btn').addEventListener('click', () => addElement('image'));
 document.getElementById('text-btn').addEventListener('click', () => addElement('text'));
-document.getElementById('upload-btn').addEventListener('click', () => addElement('upload'));
 
 function addElement(type){
     const workspace = document.getElementById("main-body")
@@ -35,9 +34,6 @@ function addElement(type){
             break;
         case "text":
             newElement = createText();
-            break;
-        case "upload":
-            newElement = createUpload();            
             break;
     }
     workspace.appendChild(newElement);
@@ -80,17 +76,6 @@ function createText() {
     return text;
 }
 
-function createUpload() {
-    const uploadContainer = document.createElement('div');
-    uploadContainer.classList.add('draggable', 'upload');
-    uploadContainer.innerHTML = 'Upload content here';
-    uploadContainer.setAttribute('draggable', true);
-    uploadContainer.style.position = 'absolute';
-    uploadContainer.addEventListener('dragstart', dragStart);
-    uploadContainer.addEventListener('dragend', dragEnd);
-    return uploadContainer;
-}
-
 let draggedElement = null;
 function dragStart(e){
     draggedElement=e.target;
@@ -119,6 +104,63 @@ workspace.addEventListener("drop",(e)=>{
         draggedElement.style.top = `${mouseY - draggedElement.offsetHeight / 2}px`;
     }
 })
+
+
+// image copying functionality---------------
+document.addEventListener("paste", function(e){
+    const items = e.clipboardData.items;
+     let foundImage = false;
+
+    for (let i = 0; i < items.length; i++) {
+        const item = items[i];
+        if (item.type.indexOf("image") !== -1) {
+            const blob = item.getAsFile();
+            const imgURL = URL.createObjectURL(blob);
+            addImageToWorkspace(imgURL);
+            foundImage = true;
+            break;
+        }
+        if (item.type === "text/plain") {
+            item.getAsString(function (text) {
+                if (isImageUrl(text)) {
+                    addImageToWorkspace(text);
+                }
+            });
+        }
+    }
+    if (!foundImage) {
+        console.log("No image found in clipboard.");
+    }
+});
+
+function isImageUrl(url){
+    return (url.match(/\.(jpeg|jpg|gif|png|webp|svg)$/i) != null);
+}
+
+function addImageToWorkspace(imageUrl){
+    const pastedImageWrapper = document.createElement("div");
+    pastedImageWrapper.classList.add("draggable", "image");
+    const pastedImage = document.createElement("img");
+    pastedImage.src =imageUrl;
+    pastedImage.alt = "pasted image";
+    pastedImage.style.maxWidth = '200px';
+    pastedImage.style.height = 'auto';
+
+    
+    pastedImageWrapper.appendChild(pastedImage);
+    pastedImageWrapper.setAttribute('draggable', true);
+    pastedImageWrapper.style.position = 'absolute';
+    pastedImageWrapper.style.left = '100px';
+    pastedImageWrapper.style.top = '100px';
+
+    pastedImageWrapper.addEventListener('dragstart', dragStart);
+    pastedImageWrapper.addEventListener('dragend', dragEnd);
+
+    const workspace = document.getElementById('main-body');
+    workspace.appendChild(pastedImageWrapper);
+}
+
+
 
 // dustbin functionality----------------------------------------------------------------------------
 const dustbin = document.getElementById("dustbin");
