@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <title>Moodboard Web app</title>
+</head>
+<body>
+    <div id="main">
+        <div id="side-bar" class="hide-it">
+            <div id="note-btn">
+                <i class="ri-sticky-note-add-line"></i>
+                <h4>Note</h4>
+            </div>
+            <div id="img-btn">
+                <i class="ri-image-line"></i>
+                <h4>Image</h4>
+            </div>
+            <div id="text-btn">
+                <i class="ri-text"></i>
+                <h4>Text</h4>
+            </div>
+            <div id="upload-btn">
+                <i class="ri-upload-2-line"></i>
+                <h4>Upload</h4>
+            </div>
+        </div>
+        <nav id="navbar">
+            <i id="ham-menu" class="ri-menu-line"></i>
+            <div id="board-name" contenteditable="true" onblur="pName()">
+                moodboard-name
+            </div>
+            <button id="save-nav">Save</button>
+
+        </nav>
+        <div id="main-body">
+
+
+        </div>
+    </div>
+    <script src="local.js"></script>
+</body>
+</html>
