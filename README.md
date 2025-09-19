@@ -1,9 +1,9 @@
 <h1><b>THEMOODBOARD WEB APP</b></h1>
 
 Designed and developed a moodboard builder.<br>
-This is a frontend-only moodboard app built with HTML, CSS, and JavaScript, allowing users to visually organize notes, images and text — without storage or database support.<br>
+This is a frontend-only moodboard app built with HTML, CSS, and JavaScript, allowing users to visually organize notes, images and text — without storage or database support.
 
-
+<br>
 WHAT IS A MOODBOARD?<br>
 💡 A moodboard is a visual space to collect and organize ideas using images, text, and notes.
 It's used by designers and creatives to plan styles, concepts, or inspiration.
