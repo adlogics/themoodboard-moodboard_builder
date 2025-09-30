@@ -10,10 +10,10 @@ It's used by designers and creatives to plan styles, concepts, or inspiration.<b
 
 <br>
 FUNCTIONALITIES OF MY WEB APP: <br>
-✅ 1. Add Elements to the Board: Users can add notes, images, text blocks to the main workspace by clicking buttons. Each element appears as a draggable box on the board.<br>
-
-✅ 2. Drag and Position Items Freely: All elements (notes, images, text etc.) can be dragged and moved anywhere on the board. This gives users full control over how they organize their ideas visually.<br>
-
+✅ 1. Add Elements to the Board: Users can add notes, images, text blocks to the main workspace by clicking buttons. Each element appears as a draggable box on the board.
+<br>
+✅ 2. Drag and Position Items Freely: All elements (notes, images, text etc.) can be dragged and moved anywhere on the board. This gives users full control over how they organize their ideas visually.
+<br>
 ✅ 3. Paste Images from Clipboard: Users can copy and paste images (or image URLs) directly into the workspace. The pasted image appears on the board and can also be moved around like any other item.<br>
 
 <br>
