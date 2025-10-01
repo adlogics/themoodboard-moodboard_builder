@@ -1,7 +1,7 @@
 <h1><b>THEMOODBOARD WEB APP</b></h1>
 
 Designed and developed a moodboard builder.<br>
-This is a frontend-only moodboard app built with HTML, CSS, and JavaScript, allowing users to visually organize notes, images and text — without storage or database support.
+This is a moodboard app built with HTML, CSS, and JavaScript, allowing users to visually organize notes, images and text — without storage or database support.
 
 <br>
 WHAT IS A MOODBOARD?<br>
@@ -9,14 +9,20 @@ WHAT IS A MOODBOARD?<br>
 It's used by designers and creatives to plan styles, concepts, or inspiration.<br>
 
 <br>
-FUNCTIONALITIES OF MY WEB APP: <br>
-✅ 1. Add Elements to the Board: Users can add notes, images, text blocks to the main workspace by clicking buttons. Each element appears as a draggable box on the board.
-<br>
-✅ 2. Drag and Position Items Freely: All elements (notes, images, text etc.) can be dragged and moved anywhere on the board. This gives users full control over how they organize their ideas visually.
-<br>
-✅ 3. Paste Images from Clipboard: Users can copy and paste images (or image URLs) directly into the workspace. The pasted image appears on the board and can also be moved around like any other item.<br>
+## 🚀 Functionalities of My Web App
+---
+✅ **1. Add Elements to the Board**  
+Users can add notes, images, and text blocks to the main workspace by clicking buttons. Each element appears as a draggable box on the board.
+&nbsp;
+✅ **2. Drag and Position Items Freely**  
+All elements (notes, images, text, etc.) can be dragged and moved anywhere on the board. This gives users full control over how they organize their ideas visually.
+&nbsp;
+✅ **3. Paste Images from Clipboard**  
+Users can copy and paste images (or image URLs) directly into the workspace. The pasted image appears on the board and can also be moved around like any other item.
+&nbsp;
+✅ **4. Download Workspace as PNG**  
+You can now download your entire moodboard workspace as a PNG image. Just click the download button, and a snapshot of your board will be saved — perfect for sharing or saving your creative layout.
 
-<br>
 FUTURE VERSIONS:<br>
 Gonna add upload functionality in future version.<br>
 Gonna add storage or database support in future version.<br>
