@@ -1,6 +1,6 @@
 @font-face {
     font-family: MartianMonoVF;
-    src: url(./MartianMonoVF.woff2);
+    src: url(./Fonts/MartianMonoVF.woff2);
 }
 
 *{
@@ -39,6 +39,7 @@ html,body{
 }
 
 #side-bar #note-btn{
+    cursor: pointer;
     padding: 16px;
     display: flex;
     flex-direction: column;
@@ -47,6 +48,7 @@ html,body{
     gap: 8px;
 }
 #side-bar #img-btn{
+    cursor: pointer;
     padding: 16px;
     display: flex;
     flex-direction: column;
@@ -56,6 +58,7 @@ html,body{
 
 }
 #side-bar #text-btn{
+    cursor: pointer;
     padding: 16px;
     display: flex;
     flex-direction: column;
@@ -106,13 +109,17 @@ html,body{
     cursor: pointer;
 }
 #navbar #save-nav{
+    cursor: pointer;
     background-color: #1E1E20;
     color: #EDEDED;
     padding: 4px 16px;
     outline: 0;
     border: 1px solid #403F44;
 }
-
+#navbar #save-nav:hover{
+    background-color: #403F44;
+    padding: 4px 16px;
+}
 /* #main-body (workspace) starts here------------------------------------------------------- */
 
 #main-body{
@@ -147,13 +154,14 @@ html,body{
     min-width: 150px;
     min-height: 100px;
     background-color: transparent;
-    /* background-color: #EDEDED; */
     color: #EDEDED;
     border: none;
     outline: none;
+    cursor: pointer;
 }
 
 .image {
+    cursor: pointer;
     width: auto;
     height: auto;
     /* background-color: #EDEDED; */
@@ -171,7 +179,8 @@ html,body{
 }
 #dustbin .dustbinn{
     color: #403F44;
-    font-size: 48px;
+    opacity: 50%;
+    font-size: 5rem;
 }
 .image img {
   pointer-events: none;

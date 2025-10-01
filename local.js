@@ -11,10 +11,33 @@ hamburger();
 const pName = ()=>{
     let boardName = document.getElementById("board-name");
     let newName = boardName.textContent.trim();
+    //this is when user leave it empty
     if(newName === ""){
+        // console.log('working');
         boardName.textContent = "moodboard-name"
     }
+    //this is when user enter some name
+    boardName.addEventListener('keydown', (e)=>{
+        if(e.key==='Enter'){
+            e.preventDefault();
+            const newName = boardName.textContent.trim()
+            if(newName !== ""){
+                boardName.innerHTML=`<p>${newName}</p>`
+                boardName.contentEditable = "false";
+                boardName.focus();
+            }
+        }
+    })
+    // edit again event
+    boardName.addEventListener('click',()=>{
+        if (boardName.contentEditable==="false") {
+            const newText = boardName.textContent.trim();
+            boardName.textContent=newText;
+            boardName.contentEditable = "true";
+        }
+    })
 }
+pName();
 
 // main-body starts here-------------------------------------------------------
 
@@ -180,3 +203,17 @@ const dustbin = document.getElementById("dustbin");
             }
         });
 
+// save functionality-----------------------
+const saveFunction = ()=>{
+    const saveButton = document.getElementById('save-nav')
+    saveButton.addEventListener('click',()=>{
+        html2canvas(document.getElementById('main-body')).then(canvas=>{
+            let imgName = document.getElementById('board-name').textContent.trim()
+            let newAnchor = document.createElement("a");
+            newAnchor.download = `${imgName}.png`;
+            newAnchor.href = canvas.toDataURL("image/png");
+            newAnchor.click()
+        })
+    })
+}
+saveFunction()
